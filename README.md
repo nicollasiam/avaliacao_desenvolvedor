@@ -6,7 +6,7 @@ Aplicação sugerida como desafio pela equipe do TaxWeb
 No terminal, vá até onde desejar salvar os arquivos e digite:
 
 ```bash
-git https://github.com/nicollasiam/avaliacao_desenvolvedor.git
+git clone https://github.com/nicollasiam/avaliacao_desenvolvedor.git
 cd avaliacao_desenvolvedor
 
 bundle install
