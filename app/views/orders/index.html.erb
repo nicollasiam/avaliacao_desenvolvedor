@@ -6,7 +6,7 @@
     <%= submit_tag 'import' %>
 <% end %>
 
-<% if @imported_data %>
+<% if @imported_data && @imported_data.size > 1 %>
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">

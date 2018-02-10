@@ -29,9 +29,12 @@ module Operations
                   address: line[4].force_encoding("utf-8"),
                   provider: line[5].force_encoding("utf-8") }
 
-        imported_data << order
         # buyer: 0, description: 1, price: 2, qty: 3, address: 4, provider: 5
-        Order.create!(order)
+        new_order = Order.new(order)
+
+        if new_order.save
+          imported_data << order
+        end
       end
 
       imported_data
