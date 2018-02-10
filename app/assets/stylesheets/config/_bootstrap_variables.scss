@@ -1,0 +1,29 @@
+// General style
+$font-family-sans-serif:  $body-font;
+$body-bg:                 white;
+$font-size-base:          $base-size;
+$line-height-base:        $base-height;
+$headings-font-family:    $header-font;
+
+// Semantic color scheme
+$brand-primary:   $blue;
+$brand-success:   $green;
+$brand-info:      $yellow;
+$brand-danger:    $red;
+$brand-warning:   $orange;
+
+// Buttons / inputs radius
+$border-radius-base:  0px;
+$border-radius-large: 0px;
+$border-radius-small: 0px;
+$enable-rounded: false;
+
+$btn-font-weight: 700;
+
+$spacer: 1.4rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px
+);
