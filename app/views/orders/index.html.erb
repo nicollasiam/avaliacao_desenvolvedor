@@ -7,18 +7,40 @@
 <% end %>
 
 <% if @imported_data %>
-  <table class="table">
-  <% @imported_data.each_with_index do |data, index| %>
-    <!-- Display headers -->
-    <% if index == 0 %>
-      <thead>
-        <tr>
-          <% data.each do |_, v| %>
-            <th scope="col"><%= v %></th>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <table class="table">
+        <% @imported_data.each_with_index do |data, index| %>
+          <!-- Display headers -->
+          <% if index == 0 %>
+            <thead>
+              <tr>
+              <th scope="col">#</th>
+                <% data.each do |_, v| %>
+                  <th scope="col"><%= v %></th>
+                <% end %>
+              </tr>
+            </thead>
+            <% next %>
           <% end %>
-        </tr>
-      </thead>
-    <% end %>
-  <% end %>
-  </table>
+
+          <!-- Display table content -->
+          <tbody>
+            <tr>
+              <th scope="row"><%= index %></th>
+              <% data.each do |_, v| %>
+                <td>
+                  <%= v %>
+                </td>
+              <% end %>
+            </tr>
+          </tbody>
+        <% end %>
+        </table>
+
+        <p>Total bruto: R$ <%= @total_imported %></p>
+      </div>
+    </div>
+  </div>
 <% end %>

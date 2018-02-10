@@ -14,9 +14,13 @@ class OrdersController < ApplicationController
     unless ::Validators::FileValidator.new(text_file).validate
       flash[:notice] = 'Arquivo não é separa por tab ou não possui todas as colunas'
       redirect_to :root
+      return
     end
 
     @imported_data = ::Operations::Import.new(text_file).import_to_database
+    # Sum total from all data imported
+    @total_imported = @imported_data.map { |data| data[:unit_price].to_f * data[:quantity].to_f }
+                                    .inject(:+)
     render 'orders/index'
   end
 end

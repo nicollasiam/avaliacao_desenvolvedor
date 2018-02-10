@@ -12,12 +12,12 @@ module Operations
         # But save the headers
         if index == 0
           line = line.split(/\t/)
-          imported_data << { buyer: line[0].force_encoding("utf-8"),
-                            description: line[1].force_encoding("utf-8"),
-                            unit_price: line[2].to_f,
-                            quantity: line[3].to_i,
-                            address: line[4].force_encoding("utf-8"),
-                            provider: line[5].force_encoding("utf-8") }
+          imported_data << { buyer: line[0].force_encoding("utf-8").capitalize,
+                             description: line[1].force_encoding("utf-8").capitalize,
+                             unit_price: line[2].force_encoding("utf-8").capitalize,
+                             quantity: line[3].force_encoding("utf-8").capitalize,
+                             address: line[4].force_encoding("utf-8").capitalize,
+                             provider: line[5].force_encoding("utf-8").capitalize }
           next
         end
 
