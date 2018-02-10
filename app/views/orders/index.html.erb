@@ -5,3 +5,20 @@
     <br>
     <%= submit_tag 'import' %>
 <% end %>
+
+<% if @imported_data %>
+  <table class="table">
+  <% @imported_data.each_with_index do |data, index| %>
+    <!-- Display headers -->
+    <% if index == 0 %>
+      <thead>
+        <tr>
+          <% data.each do |_, v| %>
+            <th scope="col"><%= v %></th>
+          <% end %>
+        </tr>
+      </thead>
+    <% end %>
+  <% end %>
+  </table>
+<% end %>
