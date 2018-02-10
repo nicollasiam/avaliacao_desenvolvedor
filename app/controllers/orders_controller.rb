@@ -18,7 +18,6 @@ class OrdersController < ApplicationController
     end
 
     @imported_data = ::Operations::Import.new(text_file).import_to_database
-    debugger
     # There is only the headers
     flash[:notice] = 'Dados já importados para o banco' if @imported_data.size == 1
     # Sum total from all data imported
