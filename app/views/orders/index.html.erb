@@ -1,0 +1,7 @@
+<%= form_tag orders_upload_path, multipart: true do %>
+    <%= label_tag :file, t(:upload_file) %>
+    <br>
+    <%= file_field_tag :file %>
+    <br>
+    <%= submit_tag 'import' %>
+<% end %>
