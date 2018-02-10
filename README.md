@@ -1,24 +1,34 @@
-# README
+# Nícollas Isabel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação sugerida como desafio pela equipe do TaxWeb
 
-Things you may want to cover:
+## Instalação do Sistema
+No terminal, vá até onde desejar salvar os arquivos e digite:
 
-* Ruby version
+```bash
+git https://github.com/nicollasiam/avaliacao_desenvolvedor.git
+cd avaliacao_desenvolvedor
 
-* System dependencies
+bundle install
 
-* Configuration
+rails db:create
+rails db:migrate
+```
 
-* Database creation
+## Iniciar o servidor
+Após esses passos, basta iniciar o servidor. No terminal:
 
-* Database initialization
+```bash
+rails server
+```
 
-* How to run the test suite
+O site estará no ar, no endereço http://localhost:3000
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Testes
+Também foram desenvolvidos alguns testes.
+Para executá-los, basta inserir o comando:
 
-* ...
+```bash
+bundle exec rspec
+```
